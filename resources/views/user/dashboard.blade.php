@@ -1,4 +1,7 @@
 @extends('user.master')
+@section('judul')
+    Dashboard
+@endsection
 @section('master')
 <div class="flex my-7 mx-8">
     <div class="w-full mr-4">

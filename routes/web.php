@@ -19,6 +19,9 @@ Route::get('/', function () {
 Route::get('/user/dashboard', function () {
     return view('user.dashboard');
 });
+Route::get('/user/cronologi', function () {
+    return view('user.cronologi');
+});
 
 Route::middleware([
     'auth:sanctum',

@@ -23,7 +23,7 @@
         <!-- Backdrop -->
         <div class="flex flex-col flex-1 w-full">
             @include('user.component.header')
-            <main class="h-full bg-[#64ABFF] overflow-y-auto">
+            <main class="h-full bg-[#C4D8EF] overflow-y-auto">
                 @yield('master')
             </main>
         </div>

@@ -12,7 +12,7 @@
         </button>
         <!-- Search input -->
         <div class="text-gray-800 font-medium text-[30px]">
-            <p>Dashboard</p>
+            <p>@yield('judul')</p>
         </div>
         <ul class="flex items-center flex-shrink-0 space-x-6">
             <!-- Theme toggler -->
