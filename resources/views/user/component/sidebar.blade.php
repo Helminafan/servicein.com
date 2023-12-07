@@ -5,9 +5,9 @@
         </a>
         <ul class="mt-6 mr-4">
             <li
-                class="relative px-6 py-3 bg-gradient-to-r text-white from-[#0F82EC] to-[#1DCCC2] rounded-r-3xl">
+                class="{{ request()->is('dashboard') ? ' text-white bg-gradient-to-r from-[#0F82EC] to-[#1DCCC2]' : '' }}  relative px-6 py-3  text-gray-800 rounded-r-3xl hover:text-white hover:bg-gradient-to-r from-[#0F82EC] to-[#1DCCC2]">
                 <a class="inline-flex items-center w-full text-sm font-semibold  transition-colors duration-150 "
-                    href="index.html">
+                    href="{{route('dashboard')}}">
                     <svg class="w-5 h-5" aria-hidden="true" fill="none" stroke-linecap="round"
                         stroke-linejoin="round" stroke-width="2" viewBox="0 0 24 24" stroke="currentColor">
                         <path
@@ -18,9 +18,9 @@
                 </a>
             </li>
             <li
-                class=" relative px-6 py-3  text-gray-800 rounded-r-3xl hover:text-white hover:bg-gradient-to-r from-[#0F82EC] to-[#1DCCC2]">
+                class="{{ request()->is('user/tabelresi') ? ' text-white bg-gradient-to-r from-[#0F82EC] to-[#1DCCC2]' : '' }}  relative px-6 py-3  text-gray-800 rounded-r-3xl hover:text-white hover:bg-gradient-to-r from-[#0F82EC] to-[#1DCCC2]">
                 <a class="inline-flex items-center w-full  text-sm font-semibold  transition-colors duration-150 "
-                    href="index.html">
+                    href="{{route('tabelresi.index')}}">
                     <svg xmlns="http://www.w3.org/2000/svg" fill="none" viewBox="0 0 24 24"
                         stroke-width="1.5" stroke="currentColor" class="w-6 h-6">
                         <path stroke-linecap="round" stroke-linejoin="round"
@@ -28,9 +28,7 @@
                         <path stroke-linecap="round" stroke-linejoin="round"
                             d="M15 12a3 3 0 11-6 0 3 3 0 016 0z" />
                     </svg>
-
-
-                    <span class="ml-4">Account Setting</span>
+                    <span class="ml-4">Cek Pesanan</span>
                 </a>
             </li>
 
@@ -39,7 +37,7 @@
 
                 <span>pages</span>
 
-            </div>
+            {{-- </div>
             <li
                 class=" relative px-6 py-3  text-gray-800 rounded-r-3xl hover:text-white hover:bg-gradient-to-r from-[#0F82EC] to-[#1DCCC2]">
                 <a class="inline-flex items-center w-full  text-sm font-semibold  transition-colors duration-150 "
@@ -124,7 +122,7 @@
 
                     <span class="ml-4">Logout</span>
                 </a>
-            </li>
+            </li> --}}
         </ul>
 
 

@@ -1,51 +1,3 @@
-{{-- <x-guest-layout>
-    <x-authentication-card>
-        <x-slot name="logo">
-            <x-authentication-card-logo />
-        </x-slot>
-
-        <x-validation-errors class="mb-4" />
-
-        @if (session('status'))
-            <div class="mb-4 font-medium text-sm text-green-600">
-                {{ session('status') }}
-            </div>
-        @endif
-
-        <form method="POST" action="{{ route('login') }}">
-            @csrf
-
-            <div>
-                <x-label for="email" value="{{ __('Email') }}" />
-                <x-input id="email" class="block mt-1 w-full" type="email" name="email" :value="old('email')" required autofocus autocomplete="username" />
-            </div>
-
-            <div class="mt-4">
-                <x-label for="password" value="{{ __('Password') }}" />
-                <x-input id="password" class="block mt-1 w-full" type="password" name="password" required autocomplete="current-password" />
-            </div>
-
-            <div class="block mt-4">
-                <label for="remember_me" class="flex items-center">
-                    <x-checkbox id="remember_me" name="remember" />
-                    <span class="ml-2 text-sm text-gray-600">{{ __('Remember me') }}</span>
-                </label>
-            </div>
-
-            <div class="flex items-center justify-end mt-4">
-                @if (Route::has('password.request'))
-                    <a class="underline text-sm text-gray-600 hover:text-gray-900 rounded-md focus:outline-none focus:ring-2 focus:ring-offset-2 focus:ring-indigo-500" href="{{ route('password.request') }}">
-                        {{ __('Forgot your password?') }}
-                    </a>
-                @endif
-
-                <x-button class="ml-4">
-                    {{ __('Log in') }}
-                </x-button>
-            </div>
-        </form>
-    </x-authentication-card>
-</x-guest-layout> --}}
 <!DOCTYPE html>
 <html lang="en">
   <head>
@@ -66,11 +18,11 @@
             @csrf
             <div class="mb-3">
               <label for="email" class="form-label">email</label>
-              <input id="email" class="form-control" type="email" name="email" :value="old('email')"  autofocus autocomplete="username"/>
+              <input id="email" class="form-control" type="email" name="email" :value="old('email')" required autofocus autocomplete="username"/>
             </div>
             <div class="mb-3">
               <label for="password" class="form-label">Password</label>
-              <input type="password" class="form-control" name="password"  autocomplete="current-password" id="password" />
+              <input type="password" class="form-control" name="password" required autocomplete="current-password" id="password" />
             </div>
             <div class="d-flex justify-content-between">
               <div class="form-check">
@@ -83,7 +35,7 @@
           {{-- <p>forgot password?</p> --}}
           <div class="d-flex justify-content-center mt-4">
             <p>New on our platform?</p>
-            <a href="{{route('register')}}">Create an account</a>
+            <a href="register.html">Create an account</a>
           </div>
         </div>
       </div>
@@ -95,7 +47,7 @@
     </section>
     <script src="https://cdn.jsdelivr.net/npm/bootstrap@5.0.2/dist/js/bootstrap.bundle.min.js" integrity="sha384-MrcW6ZMFYlzcLA8Nl+NtUVF0sA7MsXsP1UyJoMp4YLEuNSfAP+JcXn/tWtIaxVXM" crossorigin="anonymous"></script>
     <script src="https://code.jquery.com/jquery-3.7.0.js" integrity="sha256-JlqSTELeR4TLqP0OG9dxM7yDPqX1ox/HfgiSLBj8+kM=" crossorigin="anonymous"></script>
-    <script src="https://cdnjs.cloudflare.com/ajax/libs/jquery-validate/1.20.0/jquery.validate.min.js" integrity="sha512-WMEKGZ7L5LWgaPeJtw9MBM4i5w5OSBlSjTjCtSnvFJGSVD26gE5+Td12qN5pvWXhuWaWcVwF++F7aqu9cvqP0A==" crossorigin="anonymous" referrerpolicy="no-referrer"></script>
+    <script src="js/validasi.js"></script>
     <script type="text/javascript">
       $("#validate").validate({
         rules: {
@@ -111,10 +63,6 @@
           },
           prodi: {
             required: true,
-          },
-          email: {
-            required: true,
-            email:true,
           },
           password: {
             required: true,
