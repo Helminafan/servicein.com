@@ -35,7 +35,7 @@ Route::middleware([
     'verified',
 ])->group(function () {
     Route::get('dashboard', function () {
-        return view('dashboard');
+        return view('user.dashboard');
     })->name('dashboard');
 });
 Route::group(['prefix' => 'user', 'middleware' => [
