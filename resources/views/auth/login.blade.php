@@ -57,7 +57,7 @@
     <title>Document</title>
   </head>
   <body class="background">
-    <section class="login position-absolute top-50 start-50 translate-middle">
+    <section class="login position-absolute top-50 start-50 translate-middle ">
       <div class="card kartu">
         <div class="card-body">
           <h4>Welcome to Servicein.com</h4>
@@ -84,6 +84,10 @@
           <div class="d-flex justify-content-center mt-4">
             <p>New on our platform?</p>
             <a href="{{route('register')}}">Create an account</a>
+          </div>
+          <div class="d-flex justify-content-center mt-4">
+            
+            <a class="btn tombol" href="{{route('view.daftarteknisi')}}">Daftar Sebagai Teknisi</a>
           </div>
         </div>
       </div>
@@ -118,7 +122,7 @@
           },
           password: {
             required: true,
-            minlength: 8,
+           
           },
         },
         messages: {

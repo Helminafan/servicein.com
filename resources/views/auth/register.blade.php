@@ -100,7 +100,11 @@
           </form>
           <div class="d-flex justify-content-center mt-4">
             <p>Already have an account??</p>
-            <a href="{{route('login')}}">Sign in instead</a>
+            <a href="{{route('login')}}">Login</a>
+          </div>
+          <div class="d-flex justify-content-center mt-4">
+            <p>Daftar Sebagai Teknisi</p>
+            <a class="btn tombol" href="{{route('view.daftarteknisi')}}">Daftar</a>
           </div>
         </div>
       </div>

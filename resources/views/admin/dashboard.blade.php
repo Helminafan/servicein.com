@@ -17,7 +17,7 @@
                         <div class="row no-gutters align-items-center">
                             <div class="col mr-2">
                                 <div class="text-xs font-weight-bold text-primary text-uppercase mb-1">Jumlah Peminjam</div>
-                                <div class="h5 mb-0 font-weight-bold text-gray-800">{{$jumlah_data}}</div>
+                                <div class="h5 mb-0 font-weight-bold text-gray-800">6</div>
                             </div>
                             <div class="col-auto">
                                 <i class="fas fa-clock fa-2x text-gray-300"></i>
@@ -35,7 +35,7 @@
                             <div class="col mr-2">
                                 <div class="text-xs font-weight-bold text-success text-uppercase mb-1">Jumlah Peminjam (Annual)
                                 </div>
-                                <div class="h5 mb-0 font-weight-bold text-gray-800">{{$jumlah_data_tahun}}</div>
+                                <div class="h5 mb-0 font-weight-bold text-gray-800">5</div>
                             </div>
                             <div class="col-auto">
                                 <i class="fas fa-calendar fa-2x text-gray-300"></i>
@@ -55,7 +55,7 @@
                             <div class="col mr-2">
                                 <div class="text-xs font-weight-bold text-warning text-uppercase mb-1">Pending Requests
                                 </div>
-                                <div class="h5 mb-0 font-weight-bold text-gray-800">{{$jumlah_pending}}</div>
+                                <div class="h5 mb-0 font-weight-bold text-gray-800">4</div>
                             </div>
                             <div class="col-auto">
                                 <i class="fas fa-comments fa-2x text-gray-300"></i>
@@ -75,10 +75,15 @@
                     <!-- Card Header - Dropdown -->
                     <div class="card-header py-3 d-flex flex-row align-items-center justify-content-between">
                         <h6 class="m-0 font-weight-bold text-primary">Booking List Overview</h6>
-                        <select class="custom-select" style="width: 400px;" id="tahun" onchange="updateChart()">
+                        {{-- <select class="custom-select" style="width: 400px;" id="tahun" onchange="updateChart()">
                             @foreach ($year as $item)
                                 <option value="{{ $item }}">{{ $item }}</option>
                             @endforeach
+                        </select> --}}
+                        <select class="custom-select" style="width: 400px;" id="tahun" >
+                           
+                                <option value=2023>2023</option>
+                          
                         </select>
                         {{-- <div class="dropdown no-arrow">
                             <a class="dropdown-toggle" href="#" role="button" id="dropdownMenuLink"
@@ -113,7 +118,7 @@
     </div>
 @endsection
 
-@push('js')
+{{-- @push('js')
     <script type="text/javascript">
         // Set new default font family and font color to mimic Bootstrap's default styling
         Chart.defaults.global.defaultFontFamily = 'Nunito',
@@ -236,4 +241,4 @@
         }
         document.addEventListener('DOMContentLoaded', updateChart);
     </script>
-@endpush
+@endpush --}}

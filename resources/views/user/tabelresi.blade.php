@@ -12,7 +12,9 @@
                     <th class="w-1/4 py-4 px-6 text-left text-gray-600 font-bold uppercase">Nomor Pesanan</th>
                     <th class="w-1/4 py-4 px-6 text-left text-gray-600 font-bold uppercase">Merk</th>
                     <th class="w-1/4 py-4 px-6 text-left text-gray-600 font-bold uppercase">Keluhan Kerusakan</th>
-                    <th class="w-1/4 py-4 px-6 text-left text-gray-600 font-bold uppercase">Status</th>
+                    <th class="w-1/4 py-4 px-6 text-left text-gray-600 font-bold uppercase">Detail</th>
+                    <th class="w-1/4 py-4 px-6 text-left text-gray-600 font-bold uppercase">Statsu Pembayaran</th>
+                    <th class="w-1/4 py-4 px-6 text-left text-gray-600 font-bold uppercase">Statsu Penjemputan</th>
                 </tr>
             </thead>
             <tbody class="bg-white">
