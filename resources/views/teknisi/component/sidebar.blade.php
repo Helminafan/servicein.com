@@ -5,7 +5,7 @@
         <i class="fas fa-laugh-wink"></i>
       </div> -->
       <div class="sidebar-brand-text">
-        <p>TROPIRAYA RENTALS<span>.</span></p>
+        <p>Servicein<span>.</span>Com</p>
       </div>
       
     </a>
@@ -14,7 +14,7 @@
     <hr class="sidebar-divider my-0" />
 
     <!-- Nav Item - Dashboard -->
-    <li class="nav-item {{ request()->is('admin/dashboard') ? 'active' : '' }}">
+    <li class="nav-item {{ request()->is('teknisi/rumah') ? 'active' : '' }}">
       <a class="nav-link" href="">
         <i class="fa-brands fa-microsoft"></i>
         <span>Dashboard</span></a
@@ -24,25 +24,7 @@
     <!-- Divider -->
 
     <!-- Nav Item - Charts -->
-    <li class="nav-item {{ request()->is('admin/barang*') ? 'active' : '' }}">
-      <a class="nav-link" href="">
-        <i class="fa-solid fa-box"></i>
-
-        <span>Barang</span></a
-      >
-    </li>
-    <li class="nav-item {{ request()->is('admin/peminjam') ? 'active' : '' }}">
-      <a class="nav-link" href="">
-        <i class="fa-solid fa-layer-group"></i>
-        <span>Peminjam</span></a
-      >
-    </li>
-    <li class="nav-item {{ request()->is('admin/riwayatpeminjaman') ? 'active' : '' }}">
-      <a class="nav-link" href="">
-        <i class="fa-solid fa-clock-rotate-left"></i>
-        <span>Costumers</span></a
-      >
-    </li>
+ 
 
     <!-- Nav Item - Tables -->
    

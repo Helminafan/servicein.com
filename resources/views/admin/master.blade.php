@@ -30,7 +30,7 @@
         <!-- Sidebar -->
         @include('admin.component.sidebar')
         <!-- End of Sidebar -->
-
+        @include('sweetalert::alert')
         <!-- Content Wrapper -->
         <div id="content-wrapper" class="d-flex flex-column">
             <!-- Main Content -->
@@ -104,6 +104,34 @@
     <!-- Page level custom scripts -->
     <script src="{{ asset('admin/js/demo/datatables-demo.js') }}"></script>
     <script src="{{ asset('user/js/validasi.js') }}"></script>
+    <script src="https://cdn.jsdelivr.net/npm/sweetalert2@11"></script>
+    <script type="text/javascript">
+        $(function() {
+            $(document).on('click', '#konfirmasi', function(e) {
+                e.preventDefault();
+                var link = $(this).attr('href');
+                Swal.fire({
+                    title: 'Apakah kamu Yakin?',
+                    text: "Konfirmasi Data Ini",
+                    icon: 'warning',
+                    showCancelButton: true,
+                    confirmButtonColor: '#3085d6',
+                    cancelButtonColor: '#d33',
+                    confirmButtonText: 'Iya Konformasi data ini'
+                }).then((result) => {
+                    if (result.isConfirmed) {
+                        window.location.href = link
+                        Swal.fire(
+                            'Terkonfirmasi!',
+                            'data berhasil dikonfirmasi',
+                            'success'
+                        )
+                    }
+                })
+            })
+    
+        })
+    </script>
 
     @stack('js')
 </body>

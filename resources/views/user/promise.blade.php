@@ -78,6 +78,11 @@
                     class="w-full block rounded-md flex-1 border-0 py-1.5 pl-1 text-gray-900 placeholder:text-gray-400 focus:ring-2 focus-within:ring-indigo-600"
                     placeholder="Nama Lengkap">
             </div>
+            <div class="mt-2 mb-7 " hidden>
+                <input type="text" required name="menu_id" id="keluhan"
+                    class="w-full block rounded-md flex-1 border-0 py-1.5 pl-1 text-gray-900 placeholder:text-gray-400 focus:ring-2 focus-within:ring-indigo-600"
+                    value="{{$data->id}}">
+            </div>
             {{-- <div class="grid grid-cols-2 gap-7">
                 <div class="">
                     <div class="mt-2 mb-7 ">
@@ -98,6 +103,7 @@
                 <textarea id="about" required name="alamat" rows="3" placeholder="Masukan alamat"
                     class="block w-full rounded-md border-0 py-1.5 text-gray-900 shadow-sm ring-1 ring-inset ring-gray-300 placeholder:text-gray-400 focus:ring-2 focus:ring-inset focus:ring-indigo-600 sm:text-sm sm:leading-6"></textarea>
             </div>
+          
 
 
         </div>

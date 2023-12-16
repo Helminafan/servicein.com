@@ -28,7 +28,7 @@
     <!-- Page Wrapper -->
     <div id="wrapper">
         <!-- Sidebar -->
-        @include('admin.component.sidebar')
+        @include('teknisi.component.sidebar')
         <!-- End of Sidebar -->
 
         <!-- Content Wrapper -->
@@ -36,11 +36,12 @@
             <!-- Main Content -->
             <div id="content">
                 <!-- Topbar -->
-                @include('admin.component.navbar')
+                @include('teknisi.component.navbar')
+                @include('sweetalert::alert')
                 <!-- End of Topbar -->
                 {{-- @include('sweetalert::alert') --}}
                 <!-- Begin Page Content -->
-                @yield('admin')
+                @yield('teknisi')
                 <!-- /.container-fluid -->
             </div>
             <!-- End of Main Content -->
@@ -104,6 +105,34 @@
     <!-- Page level custom scripts -->
     <script src="{{ asset('admin/js/demo/datatables-demo.js') }}"></script>
     <script src="{{ asset('user/js/validasi.js') }}"></script>
+    <script src="https://cdn.jsdelivr.net/npm/sweetalert2@11"></script>
+    <script type="text/javascript">
+        $(function() {
+            $(document).on('click', '#konfirmasi', function(e) {
+                e.preventDefault();
+                var link = $(this).attr('href');
+                Swal.fire({
+                    title: 'Apakah kamu Yakin?',
+                    text: "Konfirmasi Data Ini",
+                    icon: 'warning',
+                    showCancelButton: true,
+                    confirmButtonColor: '#3085d6',
+                    cancelButtonColor: '#d33',
+                    confirmButtonText: 'Iya Konformasi data ini'
+                }).then((result) => {
+                    if (result.isConfirmed) {
+                        window.location.href = link
+                        Swal.fire(
+                            'Terkonfirmasi!',
+                            'data berhasil dikonfirmasi',
+                            'success'
+                        )
+                    }
+                })
+            })
+    
+        })
+    </script>
 
     @stack('js')
 </body>

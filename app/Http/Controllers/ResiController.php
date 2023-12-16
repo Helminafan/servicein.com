@@ -3,6 +3,7 @@
 namespace App\Http\Controllers;
 
 use App\Models\Promise;
+use App\Models\Service;
 use Illuminate\Http\Request;
 use Illuminate\Support\Facades\Auth;
 
@@ -15,7 +16,7 @@ class ResiController extends Controller
     {
         $user = Auth::user()->id; 
        
-        $data = Promise::with('dataUser')
+        $data = Service::with('dataUser')
             ->where('user_id', $user)
             ->get();
             
@@ -43,7 +44,7 @@ class ResiController extends Controller
      */
     public function show(string $id)
     {
-        $data = Promise::find($id);
+        $data = Service::find($id);
         return view('user.resiService',compact('data'));
     }
 

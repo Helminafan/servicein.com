@@ -56,7 +56,7 @@ class AuthController extends Controller
     public function redirectUser()
     {
         if (auth()->user()->hasRole('admin')) {
-            return redirect()->route('admin_dashboard');
+            return redirect()->route('menu.view');
         }
 
         if (auth()->user()->hasRole('user')) {

@@ -29,6 +29,7 @@
         <!-- Mobile sidebar -->
         <!-- Backdrop -->
         <div class="flex flex-col flex-1 w-full">
+            @include('sweetalert::alert')
             @include('user.component.header')
             <main class="h-full bg-[#C4D8EF] overflow-y-auto">
                 @yield('master')
@@ -37,6 +38,34 @@
     </div>
     <script src="https://cdnjs.cloudflare.com/ajax/libs/jquery/3.7.1/jquery.min.js" integrity="sha512-v2CJ7UaYy4JwqLDIrZUI/4hqeoQieOmAZNXBeQyjo21dadnwR+8ZaIJVT8EE2iyI61OV8e6M8PP2/4hpQINQ/g==" crossorigin="anonymous" referrerpolicy="no-referrer"></script>
     <script src="https://cdnjs.cloudflare.com/ajax/libs/parsley.js/2.9.2/parsley.min.js" integrity="sha512-eyHL1atYNycXNXZMDndxrDhNAegH2BDWt1TmkXJPoGf1WLlNYt08CSjkqF5lnCRmdm3IrkHid8s2jOUY4NIZVQ==" crossorigin="anonymous" referrerpolicy="no-referrer"></script>
+    <script src="https://cdn.jsdelivr.net/npm/sweetalert2@11"></script>
+    <script type="text/javascript">
+        $(function() {
+            $(document).on('click', '#konfirmasi', function(e) {
+                e.preventDefault();
+                var link = $(this).attr('href');
+                Swal.fire({
+                    title: 'Apakah kamu Yakin?',
+                    text: "Konfirmasi Data Ini",
+                    icon: 'warning',
+                    showCancelButton: true,
+                    confirmButtonColor: '#3085d6',
+                    cancelButtonColor: '#d33',
+                    confirmButtonText: 'Iya Konformasi data ini'
+                }).then((result) => {
+                    if (result.isConfirmed) {
+                        window.location.href = link
+                        Swal.fire(
+                            'Terkonfirmasi!',
+                            'data berhasil dikonfirmasi',
+                            'success'
+                        )
+                    }
+                })
+            })
+    
+        })
+    </script>
     @stack('js')
 </body>
 

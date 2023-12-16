@@ -17,9 +17,9 @@
                     @csrf
                     <div class="col-md-12">
                         <center>
-                            <a href="{{ asset('storage/' . $data->fototransaksi) }}" download="{{ $data->fototransaksi }}">
+                            <a href="{{ asset('storage/' . $data->foto_pembayaran) }}" download="{{ $data->foto_pembayaran }}">
                                 <img style="width: 500px; border: 1px solid"
-                                    src="{{ asset('storage/' . $data->fototransaksi) }}" alt="">
+                                    src="{{ asset('storage/' . $data->foto_pembayaran) }}" alt="">
                             </a>
                         </center>
                     </div>
@@ -29,7 +29,7 @@
                     </div>
                     @if ($data->status_transaksi == 0)
                         <div class="col-12 mt-4">
-                            <button style="width: 100%" type="submit" class="btn btn-warning">Konfirmasi
+                            <button style="width: 100%"  type="submit" class="btn btn-warning">Konfirmasi
                                 Pembayaran</button>
                         </div>
                     @endif

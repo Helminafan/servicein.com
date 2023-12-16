@@ -2,7 +2,10 @@
 
 namespace App\Http\Controllers;
 
+use App\Models\Menu;
 use App\Models\Promise;
+use App\Models\Service;
+use App\Models\User;
 use Illuminate\Http\Request;
 use Illuminate\Support\Facades\Storage;
 use Illuminate\Support\Str;
@@ -21,7 +24,7 @@ class ServiceController extends Controller
      */
     public function create()
     {
-        //
+        
     }
 
     /**
@@ -29,7 +32,7 @@ class ServiceController extends Controller
      */
     public function store(Request $request)
     {
-        $data = new Promise();
+        $data = new Service();
         $data->resi = Str::random(8);
         $data->merk = $request->merk;
         $data->keluhan = $request->keluhan;
@@ -39,12 +42,13 @@ class ServiceController extends Controller
         $data->nama = $request->nama;
         $data->alamat = $request->alamat;
         $data->user_id = $request->user_id;
+        $data->menu_id = $request->menu_id;
         if ($request->hasFile('foto')) {
             $photo_Profil = $request->file('foto')->store('foto');
             $data->foto = $photo_Profil;
         }
         $data->save();
-        return redirect()->route('promise');
+        return redirect()->route('tabelresi.index')->with('success', 'Tambah data Behasil!');
     }
 
     /**
@@ -52,16 +56,14 @@ class ServiceController extends Controller
      */
     public function show(string $id)
     {
-        //
+        $data = Menu::find($id);
+        return view('user.promise', compact('data'));
     }
 
     /**
      * Show the form for editing the specified resource.
      */
-    public function edit(string $id)
-    {
-        //
-    }
+ 
 
     /**
      * Update the specified resource in storage.

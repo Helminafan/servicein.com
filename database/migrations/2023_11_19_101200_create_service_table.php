@@ -22,8 +22,12 @@ return new class extends Migration
             $table->string('keluhan');
             $table->text('masalah');
             $table->string('foto')->nullable();
+            $table->boolean('status_teknisi')->default(false);
             $table->unsignedBigInteger('user_id');
             $table->foreign('user_id')->references('id')->on('users')->onDelete('cascade')->onUpdate('cascade');
+            $table->unsignedBigInteger('menu_id');
+            $table->foreign('menu_id')->references('id')->on('menu')->onDelete('cascade')->onUpdate('cascade');
+            $table->timestamps();
         });
     }
 
