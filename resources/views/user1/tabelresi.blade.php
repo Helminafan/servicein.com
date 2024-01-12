@@ -5,8 +5,8 @@
     <div class=" mx-8 text-gray-600 text-[40px] mt-4">
         Resi Service
     </div>
-    <div class="shadow-lg mt-3 rounded-lg overflow-x-auto mx-4 md:mx-10">
-        <table class="table-auto w-full ">
+    <div class="shadow-lg mt-3 rounded-lg overflow-hidden mx-4 md:mx-10">
+        <table class="w-full table-fixed">
             <thead>
                 <tr class="bg-gray-100">
                     <th class="w-1/4 py-4 px-6 text-left text-gray-600 font-bold uppercase">Nomor Pesanan</th>

@@ -2,20 +2,19 @@
 @section('admin')
     <div class="container-fluid" style="margin-top: 50px">
         <!-- Page Heading -->
-        <h1 class="h3 mb-2 text-gray-800">Barang-Barang</h1>
-        <p class="mb-4">DataTables is a third party plugin that is used to generate the demo table below. For more
-            information about DataTables,</p>
+        <h1 class="h3 mb-2 text-gray-800"><main>Menu</main></h1>
+  
 
         <!-- DataTales Example -->
         <div class="card shadow mb-4">
             <div class="card-header py-3">
                 <div class="row">
-                    <h6 class="col m-0 font-weight-bold text-primary">DataTables Example</h6>
+                    <h6 class="col m-0 font-weight-bold text-primary">Data Menu</h6>
                     <div class="co">
                         <a href="{{route('menu.add')}}" class="btn btn-warning btn-icon-split"><span class="icon text-white-50">
                                 <i class="fas fa-plus"></i>
                             </span>
-                            <span class="text">Tambah Barang</span></a>
+                            <span class="text">Tambah Menu</span></a>
                     </div>
                 </div>
             </div>

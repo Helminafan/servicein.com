@@ -2,14 +2,13 @@
 @section('admin')
     <div class="container-fluid" style="margin-top: 50px">
         <!-- Page Heading -->
-        <h1 class="h3 mb-2 text-gray-800">Pengembalian Barang</h1>
-        <p class="mb-4">DataTables is a third party plugin that is used to generate the demo table below. For more
-            information about DataTables,</p>
+        <h1 class="h3 mb-2 text-gray-800">Atur Teknisi </h1>
+      
 
         <!-- DataTales Example -->
         <div class="card shadow mb-4">
             <div class="card-header py-3">
-                <h6 class=" col m-0 font-weight-bold text-primary">Pengembalian Barang Rentals</h6>
+                <h6 class=" col m-0 font-weight-bold text-primary">Atur Teknisi</h6>
             </div>
             <div class="card-body">
                 <form id="validate" method="POST" action="{{route('admin.aturteknisistore')}}" class="row g-3">

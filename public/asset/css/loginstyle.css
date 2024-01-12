@@ -2,7 +2,7 @@
   background-color: rgba(222, 222, 222, 1);
 }
 .login {
-  
+ 
   width: auto;
   z-index: 999;
 }
@@ -32,4 +32,12 @@ label.error {
 
 .bawah {
     bottom: 0;
+}
+@media (max-width: 768px) {
+  .login{
+    margin-top: 150px;
+  }
+  .register{
+    margin-top: 40px;
+  }
 }

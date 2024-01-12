@@ -5,7 +5,7 @@
         <i class="fas fa-laugh-wink"></i>
       </div> -->
       <div class="sidebar-brand-text">
-        <p>Servicein<span>.</span>Com</p>
+        <p>Servicein<span>.</span> Com</p>
       </div>
       
     </a>

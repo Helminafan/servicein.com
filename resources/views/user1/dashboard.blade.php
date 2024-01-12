@@ -3,7 +3,7 @@
     Dashboard
 @endsection
 @section('master')
-    <div class="flex my-7 ml-8">
+    <div class="flex my-7 mx-8">
         <div class="w-full mr-4">
             <div class="relative  focus-within:text-blue-500">
                 <div class="absolute inset-y-0 flex items-center pl-2">
@@ -21,18 +21,18 @@
       
     </div>
 
-    <div class="row mx-8 justify-around items-center bg-white">
-        <img class="w-12 lg:w-auto" src="{{ asset('user/assets/img/usinessman.png') }}" alt="">
-        <h1 class="font-extrabold lg:text-[40px]"> Cari Jasa Service </h1>
-        <img class="w-12 lg:w-auto" src="{{ asset('user/assets/img/question.png') }}" alt="">
+    <div class="flex mx-8 justify-around items-center bg-white">
+        <img src="{{ asset('user/assets/img/usinessman.png') }}" alt="">
+        <h1 class="font-extrabold text-[40px]"> Cari Jasa Service </h1>
+        <img src="{{ asset('user/assets/img/question.png') }}" alt="">
     </div>
 
-    <div class="grid gap-x-14 grid-cols-2 lg:grid-cols-4 my-7 mx-8">
+    <div class="grid gap-x-14 grid-cols-4 my-7 mx-8">
         @foreach ($data as $item)
             <a href="{{ route('promise',$item->id) }}">
-                <div class="item bg-white rounded-lg mt-10 w-40 lg:w-52 p-4">
+                <div class="item bg-white rounded-lg mt-10 w-52 p-4">
                     <center>
-                        <img class="object-contain h-32 w-64 lg:w-auto lg:h-auto" src="{{ asset('storage/' . $item->gambar) }}" alt="">
+                        <img src="{{ asset('storage/' . $item->gambar) }}" alt="">
                         <p>{{ $item->judul }}</p>
                     </center>
                 </div>
@@ -42,11 +42,12 @@
 
     <div class="flex my-8 mx-8 justify-between">
         <div class="flex">
-            <h1 class="text-[15px] font-bold">Periksa Gratis Sekarang</h1>
+            <h1 class="text-[30px] font-bold">Periksa Gratis Sekarang</h1>
+            <img class="" src="{{ asset('user/assets/img/rate.png') }}" alt="">
         </div>
-        <h1 class="text-[15px] font-medium">Selengkapnya</h1>
+        <h1 class="text-[30px] font-medium">Selengkapnya</h1>
     </div>
-    <div class=" my-10 grid gap-x-9 lg:grid-cols-3 mx-8">
+    <div class=" my-10 grid gap-x-9 grid-cols-3 mx-8">
         <div class="item bg-white rounded-lg p-6">
             <div class="grid grid-cols-2 ">
                 <img src="{{ asset('user/assets/img/error.png') }}" alt="">

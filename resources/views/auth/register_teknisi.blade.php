@@ -73,7 +73,7 @@
 
 <body class="background">
     <section class="login ">
-      <div style="height: 100vh" class="row justify-content-center align-items-center inner-row">
+      <div  class="row justify-content-center align-items-center inner-row">
         <div class="card col-12 col-sm-8 col-md-5 m-auto ">
             <div class="card-body">
                 <h4>Adventure starts here</h4>
@@ -117,8 +117,8 @@
                     <button type="submit" class="btn tombol">Daftar</button>
                 </form>
                 <div class="d-flex justify-content-center mt-4">
-                    <p>Already have an account??</p>
-                    <a href="{{ route('login') }}">Sign in instead</a>
+                    <p>Sudah punya akun??</p>
+                    <a href="{{ route('login') }}">Login</a>
                 </div>
             </div>
         </div>
