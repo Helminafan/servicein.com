@@ -85,6 +85,10 @@ Route::group(['prefix' => 'admin', 'middleware' => [
     Route::get('service/bukti_pembayaran/{id}', [AdminCotroller::class,'buktiPembayaran'])->name('admin.bukti_pembayaran');
     Route::post('/store/atur_teknisi', [AdminCotroller::class,'aturTeknisiStore'])->name('admin.aturteknisistore');
     Route::post('/konfirmasipembayaran/{id}',[AdminCotroller::class,'konfirmasiPembayaran'])->name('admin.konfirmasipembayaran');
+    
+    Route::get('/penarikan', [AdminCotroller::class,'penarikan'])->name('admin.penarikan');
+    Route::get('penarikan/bukti_penarikan/{id}', [AdminCotroller::class,'buktipenarikan'])->name('admin.buktipenarikan');
+    Route::post('/buktipenarikanstore/{id}',[AdminCotroller::class,'buktipenarikanstore'])->name('admin.buktipenarikanstore');
 });
 
 Route::group(['prefix' => 'teknisi', 'middleware' => [
@@ -93,8 +97,12 @@ Route::group(['prefix' => 'teknisi', 'middleware' => [
     'verified',
 ]], function () {
     Route::get('/rumah', [TeknisiController::class,'index'])->name('home_teknisi');
+    Route::get('/dashboard', [TeknisiController::class,'Dashboard'])->name('dashboard.teknisi');
     Route::get('/terima/{id}', [TeknisiController::class,'terima'])->name('teknisi.terima');
     Route::get('/transaksi/{id}', [TeknisiController::class,'editPembayaran'])->name('teknisi.editPembayaran');
+    Route::get('/riwayatPesanan', [TeknisiController::class,'riwayatpesanan'])->name('teknisi.riwayat');
+    Route::get('/tarikdana', [TeknisiController::class,'tarikdana'])->name('teknisi.tarikdana');
+    Route::post('/tarikdana/store', [TeknisiController::class,'tarikdanastore'])->name('teknisi.tarikdanastore');
     Route::post('/transaksi_store/{id}', [TeknisiController::class,'tambahPembayaran'])->name('teknisi.tambahPembayaran');
   
 });

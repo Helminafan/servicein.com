@@ -61,7 +61,7 @@
 
 <body class="background">
     <section class="login  ">
-        <div  class="row ">
+        <div class="row ">
             <div class="col-12 col-sm-8 col-md-5 mx-auto my-auto">
                 <div style="padding: 50px 0;" class="card ">
                     <div class="card-body">
@@ -114,6 +114,7 @@
     <script src="https://cdnjs.cloudflare.com/ajax/libs/jquery-validate/1.20.0/jquery.validate.min.js"
         integrity="sha512-WMEKGZ7L5LWgaPeJtw9MBM4i5w5OSBlSjTjCtSnvFJGSVD26gE5+Td12qN5pvWXhuWaWcVwF++F7aqu9cvqP0A=="
         crossorigin="anonymous" referrerpolicy="no-referrer"></script>
+    <script src="{{ asset('admin/js/validasi.js') }}"></script>
     <script type="text/javascript">
         $("#validate").validate({
             rules: {

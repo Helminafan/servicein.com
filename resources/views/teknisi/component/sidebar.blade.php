@@ -14,10 +14,21 @@
     <hr class="sidebar-divider my-0" />
 
     <!-- Nav Item - Dashboard -->
-    <li class="nav-item {{ request()->is('teknisi/rumah') ? 'active' : '' }}">
-      <a class="nav-link" href="">
+    <li class="nav-item {{ request()->is('teknisi/dashboard') ? 'active' : '' }}">
+      <a class="nav-link" href="{{route('dashboard.teknisi')}}">
         <i class="fa-brands fa-microsoft"></i>
         <span>Dashboard</span></a
+      >
+    <li class="nav-item {{ request()->is('teknisi/service') ? 'active' : '' }}">
+      <a class="nav-link" href="{{route('home_teknisi')}}">
+        <i class="fa-brands fa-microsoft"></i>
+        <span>Service</span></a
+      >
+    </li>
+    <li class="nav-item {{ request()->is('teknisi/riwayatPesanan') ? 'active' : '' }}">
+      <a class="nav-link" href="{{route('teknisi.riwayat')}}">
+        <i class="fa-solid fa-clock"></i>
+        <span>Riwayat</span></a
       >
     </li>
 

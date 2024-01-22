@@ -23,9 +23,9 @@
 
     <!-- Custom styles for this template-->
     <link href="{{ asset('admin/css/sb-admin-2.min.css') }}" rel="stylesheet" />
-    <link rel="stylesheet" href="{{asset('build/assets/app-e2c465a2.css')}}">
-    <script src="{{asset('build/assets/app-02317797.js')}}"></script>
-    {{-- @vite('resources/css/app.css') --}}
+    {{-- <link rel="stylesheet" href="{{asset('build/assets/app-e2c465a2.css')}}">
+    <script src="{{asset('build/assets/app-02317797.js')}}"></script> --}}
+    @vite('resources/css/app.css')
     <link href="{{ asset('admin/vendor/datatables/dataTables.bootstrap4.min.css') }}" rel="stylesheet" />
     <script src="https://cdnjs.cloudflare.com/ajax/libs/jquery/3.7.1/jquery.min.js"
         integrity="sha512-v2CJ7UaYy4JwqLDIrZUI/4hqeoQieOmAZNXBeQyjo21dadnwR+8ZaIJVT8EE2iyI61OV8e6M8PP2/4hpQINQ/g=="
@@ -129,7 +129,7 @@
 
     <!-- Page level custom scripts -->
 
-    <script src="{{ asset('user/js/validasi.js') }}"></script>
+    <script src="{{ asset('admin/js/validasi.js') }}"></script>
     <script src="https://cdn.jsdelivr.net/npm/sweetalert2@11"></script>
     <script type="text/javascript">
         $(function() {

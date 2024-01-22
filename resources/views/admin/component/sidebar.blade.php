@@ -39,6 +39,11 @@
             <i class="fa-solid fa-clock-rotate-left"></i>
             <span>Teknisi</span></a>
     </li>
+    <li class="nav-item {{ request()->is('admin/penarikan*') ? 'active' : '' }}">
+        <a class="nav-link" href="{{route('admin.penarikan')}}">
+            <i class="fa-solid fa-dollar"></i>
+            <span>Penarikan</span></a>
+    </li>
   
 
     <!-- Nav Item - Tables -->

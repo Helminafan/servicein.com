@@ -3,8 +3,10 @@
 namespace App\Http\Controllers;
 
 use App\Models\Service;
+use App\Models\TarikDana;
 use App\Models\TokoTeknisi;
 use App\Models\Transaksi;
+use App\Models\User;
 use Illuminate\Http\Request;
 use Illuminate\Support\Facades\Auth;
 
@@ -16,24 +18,39 @@ class TeknisiController extends Controller
     public function index()
     {
         $user = Auth::user()->id;
-        $data = TokoTeknisi::with('teknisi')->where('teknisi_id',$user)->get();
-        return view('teknisi.home',compact('data'));
+        $data = TokoTeknisi::with('teknisi')->where('teknisi_id', $user)->get();
+        return view('teknisi.home', compact('data'));
     }
 
     /**
      * Show the form for creating a new resource.
      */
-    public function create()
+    public function Dashboard()
     {
-        //
+        $user = Auth::user()->id;
+        $data = TarikDana::where('user_id', $user)->get();
+        return view('teknisi.dashboard', compact('data'));
     }
 
     /**
      * Store a newly created resource in storage.
      */
-    public function store(Request $request)
+    public function tarikdana()
     {
-        //
+
+        return view('teknisi.tarikdana');
+    }
+    public function tarikdanastore(Request $request)
+    {
+        $user = Auth::user()->id;
+        $data = new TarikDana();
+        $data->nama_pengguna = $request->nama_pengguna;
+        $data->jumlah = $request->jumlah;
+        $data->bank = $request->bank;
+        $data->rekening = $request->rekening;
+        $data->user_id = $user;
+        $data->save();
+        return redirect()->route('dashboard.teknisi')->with('success', 'Data Terkirim!');
     }
 
     /**
@@ -58,7 +75,13 @@ class TeknisiController extends Controller
     public function editPembayaran(string $id)
     {
         $data = Transaksi::find($id);
-        return view('teknisi.pembayaran',compact('data'));
+        return view('teknisi.pembayaran', compact('data'));
+    }
+    public function riwayatpesanan()
+    {
+        $user = Auth::user()->id;
+        $data = TokoTeknisi::where('teknisi_id', $user)->get();
+        return view('teknisi.riwayatpesanan', compact('data'));
     }
 
     /**

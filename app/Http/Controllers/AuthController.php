@@ -64,7 +64,7 @@ class AuthController extends Controller
         }
 
         if (auth()->user()->hasRole('teknisi')) {
-            return redirect()->route('home_teknisi');
+            return redirect()->route('dashboard.teknisi');
         }
     }
     public function logout()

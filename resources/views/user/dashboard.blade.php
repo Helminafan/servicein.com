@@ -27,10 +27,10 @@
         <img class="w-12 lg:w-auto" src="{{ asset('user/assets/img/question.png') }}" alt="">
     </div>
 
-    <div class="grid gap-x-14 grid-cols-2 lg:grid-cols-4 my-7 mx-8">
+    <div class="grid gap-x-6 lg:gap-x-14 grid-cols-2 lg:grid-cols-4 my-7 mx-8">
         @foreach ($data as $item)
             <a href="{{ route('promise',$item->id) }}">
-                <div class="item bg-white rounded-lg mt-10 w-40 lg:w-52 p-4">
+                <div class="item bg-white rounded-lg mt-10 w-32 lg:w-52 p-4">
                     <center>
                         <img class="object-contain h-32 w-64 lg:w-auto lg:h-auto" src="{{ asset('storage/' . $item->gambar) }}" alt="">
                         <p>{{ $item->judul }}</p>

@@ -39,10 +39,10 @@
         $(document).ready(function() {
             $("#validate").validate({
                 rules: {
-                    namaBarang: {
+                    judul: {
                         required: true,
                     },
-                    merek: {
+                    gambar: {
                         required: true,
                     },
                     jumlahBarang: {

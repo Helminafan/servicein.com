@@ -1,6 +1,4 @@
 @extends('user.master')
-@section('judul')
-@endsection
 @section('master')
     <div class=" mx-8 text-gray-600 text-[40px] mt-4">
         Resi Service

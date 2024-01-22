@@ -4,9 +4,8 @@
     <!-- Konten Halaman Tambah Barang -->
     <div class="container-fluid" style="margin-top: 50px">
         <!-- Page Heading -->
-        <h1 class="h3 mb-2 text-gray-800">Tambah Barang</h1>
-        <p class="mb-4">DataTables is a third party plugin that is used to generate the demo table below. For more
-            information about DataTables,</p>
+        <h1 class="h3 mb-2 text-gray-800">Pembyaran</h1>
+     
 
         <!-- DataTales Example -->
         <div class="card shadow mb-4">

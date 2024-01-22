@@ -19,6 +19,7 @@ return new class extends Migration
             $table->string('role');
             $table->string('ijazah')->nullable();
             $table->string('sertifikat')->nullable();
+            $table->integer('saldo')->nullable();
             $table->string('password');
             $table->boolean('konfirmasi')->default(false);
             $table->rememberToken();
