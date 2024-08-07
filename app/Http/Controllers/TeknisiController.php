@@ -50,7 +50,7 @@ class TeknisiController extends Controller
         $data->rekening = $request->rekening;
         $data->user_id = $user;
         $data->save();
-        return redirect()->route('dashboard.teknisi')->with('success', 'Data Terkirim!');
+        return redirect()->route('dashboard.teknisi')->with('success', 'Data  Terkirim!');
     }
 
     /**
