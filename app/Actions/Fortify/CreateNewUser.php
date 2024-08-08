@@ -29,16 +29,21 @@ class CreateNewUser implements CreatesNewUsers
             'terms' => Jetstream::hasTermsAndPrivacyPolicyFeature() ? ['accepted', 'required'] : '',
         ])->validate();
 
-        return DB::transaction(function () use ($input) {
-            return tap(User::create([
+       return DB::transaction(function () use ($input) {
+            $user = User::create([
                 'name' => $input['name'],
                 'email' => $input['email'],
                 'telp' => $input['telp'],
-                'role' => 'user',
+                'role' => 'user', // Ini bisa dihapus, peran akan dikelola oleh spatie/laravel-permission
                 'password' => Hash::make($input['password']),
-            ]), function (User $user) {
-                $this->createTeam($user);
-            });
+            ]);
+
+            // Menetapkan peran ke pengguna
+            $user->assignRole('user');
+
+            $this->createTeam($user);
+
+            return $user;
         });
     }
 
